@@ -1,51 +1,100 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Flexboxes</title>
+    <title>Calculator</title>
     <style>
-        body{
-            background-color: rgb(240, 246, 246);
+        @font-face {
+            font-family: "DS-Digital Normal";
+            font-style: normal;
+            font-weight: normal;
+            src: local("DS-Digital Normal"), url("DS-DIGI.woff") format("woff");
         }
 
-        .container{
-            display: flex;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-        }
-
-        .item{
-            height: 400px;
-            width: 300px;
-            margin: 5px;
-            border: 1px solid rgb(237, 232, 232);
+        .calculator-body {
+            height: 300px;
+            width: 250px;
+            background-color: #3D3D5C;
+            margin: 20px auto;
             border-radius: 10px;
-            background-color: white;
+            padding: 20px;
+            padding-top: 40px;
         }
 
-        .item:hover{
-            border: 1px solid rgb(206, 203, 203);
+        .screen {
+            background-color: #a1af77;
+            text-align: right;
+            width: 220px;
+            display: block;
+            margin: 0 auto;
+            font-size: 25px;
+            padding: 5px 10px;
+            margin-bottom: 20px;
+            font-family: "DS-Digital Normal";
         }
 
-        .main-img{
-            border-radius: 10px 10px 0px 0px;
-            margin-bottom: 5px;
+        .buttons-container {
+            height: 200px;
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .project-heading{
-            font-size: 23px;
-            font-weight: 600;
-            font-family: cursive;
+        .btn {
+            width: 50px;
+            text-align: center;
+            padding: 2px;
+            font-size: 20px;
+            margin: 3px;
+            border: 0.5px solid black;
+            border-radius: 5px;
+            cursor: pointer;
         }
 
-        .sub-container{
-            padding-left: 10px;
-            padding-right: 10px;
+        .btn:hover {
+            box-shadow: 0 0 5px 0 #fff;
+            transition: 0.5s;
+        }
+
+        .btn-equals {
+            background-color: #FF6348;
+            height: 70px;
+            color: #fff;
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="item">
-            <img>
+    <div class="calculator-body">
+        <input type="text" value="0." class="screen" />
+
+        <div class="buttons-container">
+            <button class="btn">AC</button>
+            <button class="btn">7</button>
+            <button class="btn">4</button>
+            <button class="btn">1</button>
+            <button class="btn">0</button>
+
+            <button class="btn">M+</button>
+            <button class="btn">8</button>
+            <button class="btn">2</button>
+            <button class="btn">5</button>
+            <button class="btn">.</button>
+
+            <button class="btn">/</button>
+            <button class="btn">9</button>
+            <button class="btn">6</button>
+            <button class="btn">3</button>
+            <button class="btn">%</button>
+
+            <button class="btn">X</button>
+            <button class="btn">-</button>
+            <button class="btn">+</button>
+            <button class="btn btn-equals">=</button>
+        </div>
 </body>
+
 </html>
